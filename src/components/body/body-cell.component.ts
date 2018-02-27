@@ -13,7 +13,7 @@ import { MouseEvent, KeyboardEvent } from '../../events';
   selector: 'datatable-body-cell',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
-    <div class="datatable-body-cell-label">
+    <div class="datatable-body-cell-label" role="none">
       <label
         *ngIf="column.checkboxable && (!displayCheck || displayCheck(row, column, value))"
         class="datatable-checkbox">
