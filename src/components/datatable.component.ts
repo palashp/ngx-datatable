@@ -25,9 +25,11 @@ import { BehaviorSubject } from 'rxjs/BehaviorSubject';
   selector: 'ngx-datatable',
   template: `
     <div
+      role="none"
       visibilityObserver
       (visible)="recalculate()">
       <datatable-header
+        role="row"
         *ngIf="headerHeight"
         [sorts]="sorts"
         [sortType]="sortType"
@@ -49,6 +51,7 @@ import { BehaviorSubject } from 'rxjs/BehaviorSubject';
         (columnContextmenu)="onColumnContextmenu($event)">
       </datatable-header>
       <datatable-body
+        role="none"
         [groupRowsBy]="groupRowsBy"
         [groupedRows]="groupedRows"
         [rows]="_internalRows"
